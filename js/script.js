@@ -24,32 +24,36 @@ const arrayOfHealthTips = [
 ];
 
 let countOfPills = 5;
+let pillsArray = ['💊', '💊', '💊', '💊', '💊']; // Массив для отображения смайликов
+
 const pillsContainer = document.getElementById('count_of_pill');
 const btnWishes = document.getElementById('btn_wishes');
 const btnBuyPills = document.getElementById('btn_buy_pill');
 const pWishes = document.getElementById('p_wishes');
 
-// Оновлення відображення кількості пігулок
+// Функция обновления отображения таблеток
 function updatePillsDisplay() {
-    pillsContainer.innerText = '💊'.repeat(countOfPills);
-    btnWishes.disabled = countOfPills === 0; // Вимикаємо кнопку, якщо немає пігулок
+    pillsContainer.innerText = pillsArray.join('');
 }
 
-// Обробка натискання кнопки "Отримати пораду"
-btnWishes.addEventListener('click', function() {
-    if (countOfPills > 0) {
-        let index = Math.floor(Math.random() * arrayOfHealthTips.length);
-        pWishes.innerText = arrayOfHealthTips[index];
-        countOfPills--;
-        updatePillsDisplay();
-    }
-});
+// Обработчик нажатия на кнопку "Отримати пораду"
+btnWishes.addEventListener('click', function () {
+    let index = Math.floor(Math.random() * arrayOfHealthTips.length);
+    pWishes.innerText = arrayOfHealthTips[index];
 
-// Обробка натискання кнопки "Купити 💊"
-btnBuyPills.addEventListener('click', function() {
-    countOfPills = 5;
+    // Заменяем первую найденную таблетку на белый кружок ⚪
+    let pillIndex = pillsArray.indexOf('💊');
+    if (pillIndex !== -1) {
+        pillsArray[pillIndex] = '⚪';
+    }
     updatePillsDisplay();
 });
 
-// Початкове оновлення відображення пігулок
+// Обработчик нажатия на кнопку "Купити 💊"
+btnBuyPills.addEventListener('click', function () {
+    pillsArray = ['💊', '💊', '💊', '💊', '💊']; // Восстанавливаем таблетки
+    updatePillsDisplay();
+});
+
+// Первоначальное обновление отображения таблеток
 updatePillsDisplay();
