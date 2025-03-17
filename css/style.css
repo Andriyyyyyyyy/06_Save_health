@@ -128,3 +128,34 @@ h2 {
   color: #000000;
   text-align: justify;
 }
+.img{
+  width: 300px;
+  height: 300px;
+}
+.arrows{
+width: 50px;
+height: 50px;
+position: absolute;
+background-image: url(arrow.png);
+background-size: 100% 100%;
+}
+#leftarrow{
+rotate: 180deg;
+right: 360px;
+bottom: 0px;
+}
+#imagero{
+background-image: url(health.jpg);
+background-size: 100% 100%;
+position: relative;
+left:100px;
+}
+#rightarrow{
+left: 410px;
+bottom: 0px;
+}
+#intsca{
+width: 450px;
+height: 300px;
+position: relative;
+}
