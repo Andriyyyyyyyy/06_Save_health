@@ -1,4 +1,3 @@
-
 body {
   padding: 0;
   font-family: "Arial", sans-serif;
@@ -21,27 +20,6 @@ h2 {
   border-bottom: 1px solid #0004ff;
 }
 
-.site-header {
-  margin-bottom: 30px;
-}
-
-.skills-item {
-  margin-bottom: 15px;
-  padding-left: 20px;
-  border-left: 10px solid #00fffb;
-  color: #999999;
-}
-
-.standard {
-  border-color: #3384ff;
-  color: #25b6ff;
-}
-
-.vip {
-  border-color: #000000;
-  color: #9dc7ed;
-}
-
 .container {
   width: 480px;
   margin: 0 auto;
@@ -50,35 +28,6 @@ h2 {
 .site-header img {
   display: block;
   margin: 0 auto;
-}
-
-.features {
-  margin-bottom: 30px;
-}
-
-.features p {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
-  margin: 0 5px;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center top;
-}
-
-.feature-kitten {
-  padding-top: 60px;
-  background-image: url("../img/love.png");
-}
-
-.feature-cat {
-  padding-top: 60px;
-  background-image: url("../img/star.png");
-}
-
-.feature-train {
-  padding-top: 60px;
-  background-image: url("../img/gift.png");
 }
 
 .skills-list {
@@ -100,17 +49,6 @@ h2 {
   cursor: pointer;
 }
 
-.site-footer p:last-child {
-  background-color: #1038e6;
-  color: #ffffff;
-  cursor: default;
-}
-
-.wishes {
-  margin-top: 30px;
-  text-align: center;
-}
-
 #btn_wishes {
   background-color: #26a1ff;
   color: #ffffff;
@@ -127,4 +65,42 @@ h2 {
   line-height: 40px;
   color: #000000;
   text-align: justify;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.main-image {
+  width: 300px;
+  height: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.arrow-image {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+#left-arrow {
+  left: 10px;
+}
+
+#right-arrow {
+  right: 10px;
 }
