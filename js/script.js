@@ -57,3 +57,43 @@ btnBuyPills.addEventListener('click', function () {
 
 // Первоначальное обновление отображения таблеток
 updatePillsDisplay();
+
+// робота з об'єктами
+const arrayOfVitaminObjects = [
+    {
+        "id": "1",
+        "title": "Вітамін B",
+        "photo": "",
+        "description": "",
+        "rating": "",
+        "useful": ""
+    },
+    {
+        "id": "2",
+        "title": "Омега D3",
+        "photo": "",
+        "description": "",
+        "rating": "",
+        "useful": ""
+    },
+    {
+        "id": "3",
+        "title": "Вітамін C",
+        "photo": "",
+        "description": "",
+        "rating": "",
+        "useful": ""
+    }
+];
+
+// console.log(arrayOfVitaminObjects)
+
+arrayOfVitaminObjects.forEach((item) => {
+    console.log(item);
+
+    let divVitamin = document.createElement('div');
+    divVitamin.classList.add('vitamin');
+    divVitamin.innerText = item.title;
+
+    document.getElementById('p-vitamins').appendChild(divVitamin);
+});
