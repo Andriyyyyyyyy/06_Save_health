@@ -82,3 +82,14 @@ rightArrow.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % images.length;
     updateImage();
 });
+// console.log(arrayOfVitaminObjects)
+
+arrayOfVitaminObjects.forEach((item) => {
+    console.log(item);
+
+    let divVitamin = document.createElement('div');
+    divVitamin.classList.add('vitamin');
+    divVitamin.innerText = item.title;
+
+    document.getElementById('p-vitamins').appendChild(divVitamin);
+});
