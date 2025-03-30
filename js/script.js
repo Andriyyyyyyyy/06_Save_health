@@ -57,3 +57,28 @@ btnBuyPills.addEventListener('click', function () {
 
 // Первоначальное обновление отображения таблеток
 updatePillsDisplay();
+const images = [
+    "img/gallery/3.png",
+    "img/gallery/4.png",
+    "img/gallery/5.png",
+    "img/gallery/6.png"
+];
+
+let currentIndex = 0;
+const galleryImg = document.getElementById("gallery-img");
+const leftArrow = document.getElementById("left-arrow");
+const rightArrow = document.getElementById("right-arrow");
+
+function updateImage() {
+    galleryImg.src = images[currentIndex];
+}
+
+leftArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage();
+});
+
+rightArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
+});
