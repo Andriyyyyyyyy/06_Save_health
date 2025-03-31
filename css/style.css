@@ -195,6 +195,40 @@ position: relative;
   border: #999999 1px solid;
   box-shadow: 10px 10px 20px #dc4c4c;
   padding: 10px;
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
+  text-align: center
+  color #ff5a26;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+}
+.vitamin:hoover{
+  transform:scale(1.1);
+  box-shadow: 15px 15px 30px #aaaaaa;
+  background-color: #f5f5f5  
+}
+.vitamin-photo{
+  width: 100px;
+  height:100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition:opacity 0.3s ease-in-out;
+}
+
+.vitamin h3{
+text-align: center;
+font-size: 24px;
+}
+.vitamin img
+{
+  width: 128px;
+  height: 128px;
+}
+.vitamin p:nth-child('2')
+{
+text-align:justify;
+font-size:18px;
 }
