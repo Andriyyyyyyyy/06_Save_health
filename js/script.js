@@ -82,14 +82,54 @@ rightArrow.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % images.length;
     updateImage();
 });
-// console.log(arrayOfVitaminObjects)
 
-arrayOfVitaminObjects.forEach((item) => {
+const ArrayOfVitams=[
+    {
+   "id": 1,
+   "title":"Вітамін С",
+   "photo":"img/vitamins/vitamin-c.png",
+   "description":"Кристалічний порошок білого або майже білого кольору чи безбарвні кристали",
+   "rating":"2",
+   "type":"",
+
+},
+
+{
+    "id": 2,
+    "title":"Омега Д3",
+   "photo":"img/vitamins/vitamin.png",
+   "description":"поліненасичені жирні кислоти належать до родини",
+   "rating":"4",
+   "type":"",
+ 
+ },
+
+ {
+    "id": 3,
+    "title":"Вітамін В",
+   "photo":"img/vitamins/vitamins.png",
+   "description":"Вітаміни групи B, «вітаміни B», «В-комплекс» та ін. — вітаміни, розчинні у воді",
+   "rating":"3",
+   "type":"",
+ 
+ }
+]
+
+ArrayOfVitams.forEach((item) => {
+    //console.log(item)
     console.log(item);
-
     let divVitamin = document.createElement('div');
-    divVitamin.classList.add('vitamin');
-    divVitamin.innerText = item.title;
+    divVitamin.classList.add('vitamins');
+    divVitamin.innerHTML = `
+        <p>${item.id}</p>
+        <h3>${item.title}</h3>
+        <hr>
+        <img src="img/vitamins/${item.photo}" alt="">
+        <p>${item.description}</p>
+        <div>
+            <p>${'💚'.repeat(item.rating) + '♡'.repeat(5 - item.rating)}</p>
+            <p>${item.type}</p>
+        </div>`
 
-    document.getElementById('p-vitamins').appendChild(divVitamin);
+  document.getElementById('p-vitamins').appendChild(divVitamin);
 });

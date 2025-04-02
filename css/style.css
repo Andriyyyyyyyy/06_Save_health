@@ -42,7 +42,7 @@ h2 {
 }
 
 .container {
-  width: 480px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -191,7 +191,7 @@ position: relative;
   gap: 20px;
 }
 
-.vitamin {
+.vitamins{
   border: #999999 1px solid;
   box-shadow: 10px 10px 20px #dc4c4c;
   padding: 10px;
@@ -203,7 +203,6 @@ position: relative;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-
 }
 .vitamin:hoover{
   transform:scale(1.1);
@@ -231,4 +230,26 @@ font-size: 24px;
 {
 text-align:justify;
 font-size:18px;
+}
+/* div for rating & type */
+.vitamin div {
+  margin-top: auto;
+  width: 100%;
+}
+
+.vitamin div p:first-child {
+  text-align: center;
+}
+
+/* type */
+.vitamin p:last-child {
+  width: 100%;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  border-radius: 5px;
+  background-color: #cccccc;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0px;
 }
