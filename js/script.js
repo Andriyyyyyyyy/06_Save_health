@@ -116,8 +116,6 @@ const ArrayOfVitams=[
 ]
 
 ArrayOfVitams.forEach((item) => {
-    //console.log(item)
-    console.log(item);
     let divVitamin = document.createElement('div');
     divVitamin.classList.add('vitamins');
     divVitamin.innerHTML = `
@@ -129,7 +127,7 @@ ArrayOfVitams.forEach((item) => {
         <div>
             <p>${'💚'.repeat(item.rating) + '♡'.repeat(5 - item.rating)}</p>
             <p>${item.type}</p>
-        </div>`
+        </div>`;
 
-  document.getElementById('p-vitamins').appendChild(divVitamin);
+    vitaminsContainer.appendChild(divVitamin);
 });
