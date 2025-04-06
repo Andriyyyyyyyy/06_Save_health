@@ -184,72 +184,83 @@ position: relative;
 }
 /* Вітаміни */
 #p-vitamins {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
 }
 
-.vitamins{
-  border: #999999 1px solid;
+.vitamin {
+  border: 1px solid #999;
   box-shadow: 10px 10px 20px #dc4c4c;
-  padding: 10px;
-  width: 150px;
-  height: 200px;
-  text-align: center
-  color #ff5a26;
-  font-size: 20px;
+  padding: 15px;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  text-align: center;
+  color: #ff5a26;
+  font-size: 16px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-}
-.vitamin:hoover{
-  transform:scale(1.1);
-  box-shadow: 15px 15px 30px #aaaaaa;
-  background-color: #f5f5f5  
-}
-.vitamin-photo{
-  width: 100px;
-  height:100px;
-  object-fit: cover;
-  margin-bottom: 10px;
-  transition:opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
-.vitamin h3{
-text-align: center;
-font-size: 24px;
+.vitamin:hover {
+  transform: scale(1.05);
+  box-shadow: 15px 15px 30px #aaaaaa;
+  background-color: #f5f5f5;
 }
-.vitamin img
-{
-  width: 128px;
-  height: 128px;
+
+.vitamin h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
-.vitamin p:nth-child('2')
-{
-text-align:justify;
-font-size:18px;
+
+.vitamin .description {
+  font-style: italic;
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
 }
-/* div for rating & type */
+
+.vitamin p:nth-of-type(2) {
+  text-align: justify;
+  font-size: 14px;
+  color: #333333;
+  margin: 0;
+}
+
+.vitamin img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
 .vitamin div {
-  margin-top: auto;
-  width: 100%;
+  margin-top: 10px;
 }
 
 .vitamin div p:first-child {
   text-align: center;
+  font-size: 16px;
 }
 
-/* type */
-.vitamin p:last-child {
+.vitamin div p:last-child {
   width: 100%;
   border-top: 1px solid #999999;
   border-bottom: 1px solid #999999;
   border-radius: 5px;
   background-color: #cccccc;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   padding: 5px 0px;
 }
