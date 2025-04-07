@@ -83,37 +83,7 @@ rightArrow.addEventListener("click", () => {
     updateImage();
 });
 
-const ArrayOfVitams=[
-    {
-   "id": 1,
-   "title":"Вітамін С",
-   "photo":"img/vitamins/vitamin-c.png",
-   "description":"Кристалічний порошок білого або майже білого кольору чи безбарвні кристали",
-   "rating":"2",
-   "type":"",
 
-},
-
-{
-    "id": 2,
-    "title":"Омега Д3",
-   "photo":"img/vitamins/vitamin.png",
-   "description":"поліненасичені жирні кислоти належать до родини",
-   "rating":"4",
-   "type":"",
- 
- },
-
- {
-    "id": 3,
-    "title":"Вітамін В",
-   "photo":"img/vitamins/vitamins.png",
-   "description":"Вітаміни групи B, «вітаміни B», «В-комплекс» та ін. — вітаміни, розчинні у воді",
-   "rating":"3",
-   "type":"",
- 
- }
-]
 
 ArrayOfVitams.forEach((item) => {
     let divVitamin = document.createElement('div');
